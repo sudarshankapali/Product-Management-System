@@ -4,10 +4,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Entity
-public class User {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    Long Id;
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
     String name;
-    String email;
+    String description;
+    String status;
+    String imageURL;
+    String owner;
+    List<Offers> offers;
 }

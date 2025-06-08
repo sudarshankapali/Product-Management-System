@@ -4,10 +4,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Entity
-public class User {
+public class Offers {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     Long Id;
-    String name;
-    String email;
+    String title;
+    String description;
+    List<Product> products;
 }
