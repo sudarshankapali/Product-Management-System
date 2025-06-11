@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MInioConfig {
-    @Value("$minio.access.name")
+    @Value("${minio.access.name}")
     String accessKey;
-    @Value("minio.access.secret")
+    @Value("${minio.access.secret}")
     String secretKey;
-    @Value("minio.url")
+    @Value("${minio.url}")
     String minioURL;
 
     @Bean
